@@ -37,7 +37,8 @@ const App = () => {
   const part3 = "State of a component";
   const exercises3 = 14;
 
-  const [contador, setContador] = React.useState(0);
+  const [counter, setCounter] = React.useState(0);
+  const [numberCounter, setNumberCounter] = React.useState(0);
 
   return (
     <div>
@@ -49,20 +50,23 @@ const App = () => {
 
       <button
         onClick={() => {
-          setContador(contador - 1);
+          setCounter(counter - 1);
+          setNumberCounter(numberCounter + 1);
         }}
       >
         Decrement
       </button>
-      <span>{contador}</span>
+      <span>{counter}</span>
       <button
         onClick={() => {
-          setContador(contador + 1);
+          setCounter(counter + 1);
+          setNumberCounter(numberCounter + 1);
         }}
       >
         {" "}
         Increment
       </button>
+      <p>Count counter: {numberCounter}</p>
     </div>
   );
 };
